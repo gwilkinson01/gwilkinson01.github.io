@@ -5,10 +5,10 @@ title: Welcome
 list_title: My blog posts
 ---
 
-<img src="./assets/imgs/pexels-markusspiske-2004161.jpg" width="400px">
+<img src="./assets/imgs/pexels-markusspiske-2004161.jpg" width="800px">
 
 👋 Hi, I’m Greg  
-👀 I’m interested in cyber security, software/data/cloud  engineering, electrical engineering, bitcoin
+👀 I’m interested in cyber security, software/data/cloud  engineering, electrical engineering, bitcoin  
 🌱 I’m currently learning malware reverse engineering, c/c++, circuit design, microcontroller programming  
 📫 You can reach me on [LinkedIn][LinkedIn]  
 💻 Checkout my projects on [GitHub][Github]  
