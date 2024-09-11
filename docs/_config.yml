@@ -1,15 +1,15 @@
 title: My blog
 description: My very nice blog
-author: "Jorge Sanz"
+author: "Greg Wilkinson"
 
 theme: minima
 
-base_url: /gh-pages-minima-starter
-repository: jsanz/gh-pages-minima-starter
+base_url: /gwilkinson01.github.io
+repository: gwilkinson01/gwilkinson01.github.io
 
 # Minima social links
-github_username: jsanz
-linkedin_username: jsanz
+github_username: gwilkinson01
+linkedin_username: gwilkinson01
 rss: rss
 
 # Minima: show excerpts in the frontpage
