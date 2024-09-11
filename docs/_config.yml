@@ -1,5 +1,5 @@
-title: My blog
-description: My very nice blog
+title: Ω Sweet Ω
+description: Ω Sweet Ω
 author: "Greg Wilkinson"
 
 theme: minima
@@ -21,7 +21,7 @@ minima:
 # Minima: custom header links
 header_pages:
   - _pages/frontpage.md
-  - _pages/about.md
+  - _pages/cv.md
   - _pages/archive.md
 
 include:
