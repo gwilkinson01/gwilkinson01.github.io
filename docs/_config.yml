@@ -1,5 +1,4 @@
-title: Ω Sweet Ω
-description: Ω Sweet Ω
+title: Greg Wilkinson
 author: "Greg Wilkinson"
 
 theme: minima
@@ -23,6 +22,7 @@ header_pages:
   - _pages/frontpage.md
   - _pages/cv.md
   - _pages/archive.md
+  - _pages/about.md
 
 include:
     - _pages
