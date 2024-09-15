@@ -13,22 +13,24 @@
             padding: 0;
             margin: 0;
             display: flex;   /* Align items horizontally */
-            justify-content: center; /* Optional: center the icons */
+            justify-content: center; /* Center the icons horizontally */
             gap: 10px;       /* Adjust space between icons */
+            align-items: center; /* Ensure vertical alignment of items */
           }
 
           ul.social-media-list li {
-            display: inline-block;
+            display: flex;  /* Ensure list items are flex containers */
+            align-items: center; /* Center-align content within each list item */
           }
 
           ul.social-media-list a {
-            display: inline-block;
+            display: flex; /* Ensure the link wraps the icon properly */
+            align-items: center; /* Center-align content within the link */
             text-decoration: none;
           }
 
-          /* Ensure all SVG icons are vertically aligned */
           ul.social-media-list svg {
-            vertical-align: middle;
+            vertical-align: middle; /* Ensure uniform vertical alignment */
             width: 24px; /* Optional: Set a uniform width */
             height: 24px; /* Optional: Set a uniform height */
           }
