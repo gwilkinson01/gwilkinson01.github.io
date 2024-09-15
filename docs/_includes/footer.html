@@ -25,6 +25,13 @@
             display: inline-block;
             text-decoration: none;
           }
+
+          /* Ensure all SVG icons are vertically aligned */
+          ul.social-media-list svg {
+            vertical-align: middle;
+            width: 24px; /* Optional: Set a uniform width */
+            height: 24px; /* Optional: Set a uniform height */
+          }
         </style>
         
         {%- include social.html -%}
