@@ -1,7 +1,12 @@
 title: Greg Wilkinson
 author: "Greg Wilkinson"
 
-theme: minima
+# theme: minima
+
+remote_theme: jekyll/minima
+
+plugins:
+    - jekyll-remote-theme
 
 base_url: /gwilkinson01.github.io
 repository: gwilkinson01/gwilkinson01.github.io
@@ -16,6 +21,7 @@ show_excerpts: true
 
 minima:
   date_format: "%Y-%m-%d"
+  skin: dark
 
 # Minima: custom header links
 header_pages:
