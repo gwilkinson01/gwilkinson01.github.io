@@ -5,12 +5,11 @@ title: Archive
 ---
 
 <div class="post">
-  <h2>Archive</h2>
 
   {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
   {% assign current_month = "" %}
 
-  <ul>
+  <ul style="list-style-type: none;"> <!-- Remove bullets for the months -->
     {% for post in sorted_posts %}
       {% assign post_month = post.date | date: "%B %Y" %}
       
@@ -26,7 +25,7 @@ title: Archive
           <h3 class="month-header" style="cursor: pointer;" onclick="toggleMonth('{{ current_month }}')">
             &#x25B6; {{ current_month }} <!-- Arrow that rotates when expanded -->
           </h3>
-          <ul id="month-{{ current_month }}" style="display: none;"> <!-- Collapsible posts list -->
+          <ul id="month-{{ current_month }}" style="display: none; list-style-type: none;"> <!-- Collapsible posts list, no bullets -->
       {% endif %}
       
       <!-- Display the post for the current month -->
@@ -55,5 +54,4 @@ title: Archive
 </script>
 
 <!-- Include the tag archive -->
-<hr style="margin-top: 30px; margin-bottom: 30px;">
 {% include archive.html %}
