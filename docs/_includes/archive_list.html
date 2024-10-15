@@ -1,0 +1,31 @@
+<!-- _includes/archive_list.html -->
+{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+{% assign current_month = "" %}
+
+{% for post in sorted_posts %}
+  {% assign post_month = post.date | date: "%B %Y" %}
+  
+  <!-- Check if we're in a new month -->
+  {% if post_month != current_month %}
+    {% if current_month != "" %}
+      <!-- Close the previous month's list -->
+      </ul>
+    {% endif %}
+    
+    <!-- Set current month and create a new expandable section -->
+    <h3 class="month-header" style="cursor: pointer;" onclick="toggleMonth('{{ post_month }}')">
+      &#x25B6; {{ post_month }} <!-- Arrow that rotates when expanded -->
+    </h3>
+    <ul id="month-{{ post_month }}" style="display: none; list-style-type: none;"> <!-- Collapsible posts list, no bullets -->
+  {% assign current_month = post_month %}
+  {% endif %}
+  
+  <!-- Display the post for the current month -->
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y-%m-%d" }})
+  </li>
+{% endfor %}
+
+{% if current_month != "" %}
+  </ul> <!-- Close the last month's list -->
+{% endif %}
