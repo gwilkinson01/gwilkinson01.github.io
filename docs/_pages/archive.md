@@ -8,6 +8,7 @@ title: Archive
 
   {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
   {% assign current_month = "" %}
+  {% capture content %} <!-- Start capturing the content -->
 
   <ul style="list-style-type: none;"> <!-- Remove bullets for the months -->
     {% for post in sorted_posts %}
@@ -16,7 +17,7 @@ title: Archive
       <!-- Check if we're in a new month -->
       {% if post_month != current_month %}
         {% if current_month != "" %}
-          </ul> <!-- Close the previous month's list properly without being printed -->
+          </ul> <!-- Close the previous month's list inside capture -->
         {% endif %}
         
         <!-- Set current month and create a new expandable section -->
@@ -36,9 +37,13 @@ title: Archive
     {% endfor %}
     
     {% if current_month != "" %}
-      </ul> <!-- Close the last month's list properly -->
+      </ul> <!-- Close the last month's list -->
     {% endif %}
-  </ul> <!-- Close the outer <ul> properly -->
+  </ul> <!-- Close the outer <ul> -->
+  
+  {% endcapture %} <!-- Stop capturing -->
+
+  {{ content | strip_newlines }} <!-- Output the captured content without extra newlines -->
 </div>
 
 <!-- Add some JavaScript to handle the collapsing/expanding functionality -->
