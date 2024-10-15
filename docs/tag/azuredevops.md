@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: azuredevops"
-tag: azuredevops
+title: "Tag: azure-devops"
+tag: azure-devops
 robots: noindex
 ---
