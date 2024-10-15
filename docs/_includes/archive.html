@@ -2,15 +2,15 @@
 <div class="tag-cloud"> <!-- Optional: Wrap with a div for styling -->
   {% capture temptags %}
     {% for tag in site.tags %}
-      {{ tag[1].size | plus: 1000 }}#{{ tag[0] | strip }}#{{ tag[1].size }} <!-- Trim whitespace -->
+      {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
     {% endfor %}
   {% endcapture %}
   
   {% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
   {% for temptag in sortedtemptags %}
     {% assign tagitems = temptag | split: '#' %}
-    {% capture tagname %}{{ tagitems[1] | strip }}{% endcapture %} <!-- Trim whitespace -->
-
+    {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
+    
     <a href="/tag/{{ tagname }}" class="tag-item"> <!-- Ensure it's inline -->
       <code class="highligher-rouge">
         <nobr>{{ tagname }}</nobr>
