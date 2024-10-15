@@ -1,12 +1,21 @@
 <h2>Archive</h2>
-{% capture temptags %}
-  {% for tag in site.tags %}
-    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+<div class="tag-cloud"> <!-- Wrap the tags in a block element -->
+  {% capture temptags %}
+    {% for tag in site.tags %}
+      {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+    {% endfor %}
+  {% endcapture %}
+  
+  {% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
+  
+  {% for temptag in sortedtemptags %}
+    {% assign tagitems = temptag | split: '#' %}
+    {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
+    
+    <a href="/tag/{{ tagname }}"><code class="highligher-rouge"><nobr>{{ tagname }}</nobr></code></a>
+    
+    {% if forloop.last == false %} <!-- Add space after each tag except the last one -->
+      <span style="margin-right: 5px;"></span>
+    {% endif %}
   {% endfor %}
-{% endcapture %}
-{% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
-{% for temptag in sortedtemptags %}
-  {% assign tagitems = temptag | split: '#' %}
-  {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
-  <a href="/tag/{{ tagname }}"><code class="highligher-rouge"><nobr>{{ tagname    }}</nobr></code></a>
-{% endfor %}
+</div>
