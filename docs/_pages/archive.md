@@ -16,7 +16,7 @@ title: Archive
       <!-- Check if we're in a new month -->
       {% if post_month != current_month %}
         {% if current_month != "" %}
-          </ul> <!-- Close the previous month's list -->
+          </ul> <!-- Close the previous month's list properly without being printed -->
         {% endif %}
         
         <!-- Set current month and create a new expandable section -->
@@ -35,8 +35,10 @@ title: Archive
       
     {% endfor %}
     
-    </ul> <!-- Close the last month's list -->
-  </ul> <!-- Close the outer <ul> -->
+    {% if current_month != "" %}
+      </ul> <!-- Close the last month's list properly -->
+    {% endif %}
+  </ul> <!-- Close the outer <ul> properly -->
 </div>
 
 <!-- Add some JavaScript to handle the collapsing/expanding functionality -->
@@ -55,6 +57,5 @@ title: Archive
   }
 </script>
 
-<!-- Include the tag archive test -->
+<!-- Include the tag archive -->
 {% include archive.html %}
-
