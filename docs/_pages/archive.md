@@ -13,3 +13,5 @@ title: Archive
   {% endfor %}
 </ul>
 </div>
+
+{% include archive.html %}
