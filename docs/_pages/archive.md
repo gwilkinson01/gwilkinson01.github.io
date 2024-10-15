@@ -8,39 +8,38 @@ title: Archive
 
   {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
   {% assign current_month = "" %}
-  
+
   <ul style="list-style-type: none;"> <!-- Remove bullets for the months -->
 
     {% for post in sorted_posts %}
       {% assign post_month = post.date | date: "%B %Y" %}
-      
+
       <!-- Check if we're in a new month -->
       {% if post_month != current_month %}
         {% if current_month != "" %}
-          </ul> <!-- Close previous month's list properly -->
+          </ul> <!-- Close the previous month's list -->
         {% endif %}
         
-        <!-- Set current month and create a new section -->
+        <!-- Set current month and create a new expandable section -->
         <li>
           <h3 class="month-header" style="cursor: pointer;" onclick="toggleMonth('{{ post_month }}')">
             &#x25B6; {{ post_month }} <!-- Arrow that rotates when expanded -->
           </h3>
-          <ul id="month-{{ post_month }}" style="display: none; list-style-type: none;">
-        </li> <!-- Avoid unclosed <li> issues -->
+          <ul id="month-{{ post_month }}" style="display: none; list-style-type: none;"> <!-- Collapsible posts list, no bullets -->
+        </li> <!-- This ends the list item for the month header -->
         
         {% assign current_month = post_month %}
       {% endif %}
-      
-      <!-- Display the post -->
+
+      <!-- Display the post for the current month -->
       <li>
         <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y-%m-%d" }})
       </li>
-      
+
     {% endfor %}
-    
-    </ul> <!-- Close the final month’s list properly -->
-    
-  </ul> <!-- Close the outer list -->
+
+    </ul> <!-- Close the final month's list -->
+  </ul> <!-- Close the outer <ul> -->
 </div>
 
 <!-- Add some JavaScript to handle the collapsing/expanding functionality -->
