@@ -34,7 +34,9 @@ title: Archive
       </li>
       
     {% endfor %}
+    
     </ul> <!-- Close the last month's list -->
+  </ul> <!-- Close the outer <ul> -->
 </div>
 
 <!-- Add some JavaScript to handle the collapsing/expanding functionality -->
