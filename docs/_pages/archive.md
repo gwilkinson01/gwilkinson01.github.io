@@ -8,42 +8,39 @@ title: Archive
 
   {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
   {% assign current_month = "" %}
-  {% capture content %} <!-- Start capturing the content -->
-
+  
   <ul style="list-style-type: none;"> <!-- Remove bullets for the months -->
+
     {% for post in sorted_posts %}
       {% assign post_month = post.date | date: "%B %Y" %}
       
       <!-- Check if we're in a new month -->
       {% if post_month != current_month %}
         {% if current_month != "" %}
-          </ul> <!-- Close the previous month's list inside capture -->
+          </ul> <!-- Close previous month's list properly -->
         {% endif %}
         
-        <!-- Set current month and create a new expandable section -->
-        {% assign current_month = post_month %}
+        <!-- Set current month and create a new section -->
         <li>
-          <h3 class="month-header" style="cursor: pointer;" onclick="toggleMonth('{{ current_month }}')">
-            &#x25B6; {{ current_month }} <!-- Arrow that rotates when expanded -->
+          <h3 class="month-header" style="cursor: pointer;" onclick="toggleMonth('{{ post_month }}')">
+            &#x25B6; {{ post_month }} <!-- Arrow that rotates when expanded -->
           </h3>
-          <ul id="month-{{ current_month }}" style="display: none; list-style-type: none;"> <!-- Collapsible posts list, no bullets -->
+          <ul id="month-{{ post_month }}" style="display: none; list-style-type: none;">
+        </li> <!-- Avoid unclosed <li> issues -->
+        
+        {% assign current_month = post_month %}
       {% endif %}
       
-      <!-- Display the post for the current month -->
+      <!-- Display the post -->
       <li>
         <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y-%m-%d" }})
       </li>
       
     {% endfor %}
     
-    {% if current_month != "" %}
-      </ul> <!-- Close the last month's list -->
-    {% endif %}
-  </ul> <!-- Close the outer <ul> -->
-  
-  {% endcapture %} <!-- Stop capturing -->
-
-  {{ content | strip_newlines }} <!-- Output the captured content without extra newlines -->
+    </ul> <!-- Close the final month’s list properly -->
+    
+  </ul> <!-- Close the outer list -->
 </div>
 
 <!-- Add some JavaScript to handle the collapsing/expanding functionality -->
