@@ -26,8 +26,8 @@ title: Archive
             &#x25B6; {{ post_month }} <!-- Arrow that rotates when expanded -->
           </h3>
           <ul id="month-{{ post_month }}" style="display: none; list-style-type: none;"> <!-- Collapsible posts list, no bullets -->
-        </li> <!-- This ends the list item for the month header -->
-        
+        </li> <!-- Correctly close the month header list item -->
+
         {% assign current_month = post_month %}
       {% endif %}
 
@@ -38,6 +38,7 @@ title: Archive
 
     {% endfor %}
 
+    <!-- Close any remaining open tags -->
     </ul> <!-- Close the final month's list -->
   </ul> <!-- Close the outer <ul> -->
 </div>
@@ -59,4 +60,5 @@ title: Archive
 </script>
 
 <!-- Include the tag archive -->
+<hr style="margin-top: 30px; margin-bottom: 30px;">
 {% include archive.html %}
