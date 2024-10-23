@@ -1,7 +1,7 @@
 ---
 permalink: /
 layout: home
-title: Blog
+title: Welcome
 ---
 
 Hi 👋 and welcome to my blog!
