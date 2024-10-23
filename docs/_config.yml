@@ -23,6 +23,7 @@ header_pages:
   - _pages/archive.md
   - _pages/about.md
   - _pages/contact.md
+  - _pages/blog.md
 
 include:
     - _pages
