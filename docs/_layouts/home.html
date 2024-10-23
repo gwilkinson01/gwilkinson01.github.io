@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="typewriter-container">
+    <h1 id="typewriter"></h1>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typewriter-effect/2.18.0/core.min.js"></script>
+
+<script>
+var app = document.getElementById('typewriter');
+
+var typewriter = new Typewriter(app, {
+    loop: true,
+    delay: 75,
+    deleteSpeed: 50
+});
+
+typewriter
+    .typeString('Welcome to My Awesome Site!')
+    .pauseFor(2000)
+    .deleteAll()
+    .typeString('Built with Jekyll and JavaScript!')
+    .pauseFor(2000)
+    .deleteChars(11)
+    .typeString('Super Cool Features!')
+    .pauseFor(2500)
+    .start();
+</script>
