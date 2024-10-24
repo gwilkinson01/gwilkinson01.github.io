@@ -4,4 +4,4 @@ layout: home
 title: Home
 ---
 
-Hi! 👋 
+Hi 👋 and welcome to my blog!
