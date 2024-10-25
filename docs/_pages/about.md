@@ -8,9 +8,7 @@ title: About
 
 👋 Hi, I’m Greg
 
-👀 I’m interested in threat & vulnerability management, threat intelligence, software, data, cloud & security engineering, open source, electrical engineering, history, geopolitics, anthropology, and Bitcoin.
-
-🌱 I’m currently learning malware reverse engineering, c/c++, circuit design, and microcontroller programming.
+👀 I’m interested in threat & vulnerability management, threat intelligence, software, data, cloud & security engineering, open source, history, geopolitics, anarchism, anthropology, and Bitcoin.
 
 💻 If you're interested, check out my projects and contributions on [Github](https://github.com/gwilkinson01).
 
