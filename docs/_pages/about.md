@@ -8,7 +8,7 @@ title: About
 
 👋 Hi, I’m Greg
 
-👀 I’m interested in threat & vulnerability management, threat intelligence, software, data, cloud & security engineering, open source, history, geopolitics, anarchism, anthropology, and Bitcoin.
+👀 I’m interested in threat & vulnerability management, threat intelligence, software, data, cloud & security engineering, digital privacy, open source, history, geopolitics, anarchism, anthropology, and Bitcoin.
 
 💻 If you're interested, check out my projects and contributions on [Github](https://github.com/gwilkinson01).
 
