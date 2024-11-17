@@ -8,8 +8,8 @@ title: Home
 
 👋 Hi, I’m Greg
 
-👀 I’m interested in, threat intelligence, software, data, cloud & security engineering, digital privacy, open source, geopolitics, anarchism, anthropology, and Bitcoin.
+👀 I’m interested in threat intelligence, software, data, cloud & security engineering, digital privacy, open source, geopolitics, anarchism, anthropology, and Bitcoin.
 
 💻 If you're interested, check out my projects and contributions on [Github](https://github.com/gwilkinson01).
 
-⚡️ Enjoying my blog? Buy me a coffee… in sats! Just tip me via my Lightning address: magentajail01@walletofsatoshi.com  
+⚡️ Enjoying my blog? Buy me a coffee… in sats! Just tip me via my Lightning address: gw1@strike.me 
