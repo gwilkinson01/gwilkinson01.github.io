@@ -12,4 +12,4 @@ title: Home
 
 💻 If you're interested, check out my projects and contributions on [Github](https://github.com/gwilkinson01).
 
-⚡️ Enjoying my blog? Buy me a coffee… in sats! Just tip me via my Lightning address: gw1@strike.me 
+⚡️ Enjoying my blog? Buy me a coffee… in sats! Tip me via my Lightning address: gw1@strike.me 
