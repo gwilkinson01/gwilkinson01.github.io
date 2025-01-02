@@ -6,7 +6,7 @@ title: Home
 
 <img src="./assets/imgs/pexels-markusspiske-2004161.jpg" width="800px">
 
-👋 Hi, I’m Greg
+### 👋 Hi, I’m Greg
 
 👀 I’m interested in threat intelligence, cloud and security engineering, digital privacy, open source, history, anarchism, anthropology, and Bitcoin.
 
