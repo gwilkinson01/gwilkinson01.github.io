@@ -1,1 +1,1 @@
-This the source code to my personal website. Feel free to use it if needed :)
+My website (gregwilkinson.xyz) is built using Jekyll and hosted on GitHub pages.
