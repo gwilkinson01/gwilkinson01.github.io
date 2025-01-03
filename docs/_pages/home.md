@@ -4,7 +4,7 @@ layout: home
 title: Home
 ---
 
-<img src="./assets/imgs/pexels-markusspiske-2004161.jpg" width="800px">
+<img src="./assets/imgs/pexels-merictuna-29907156 (3).jpg" width="800px">
 
 ### 👋 Hi, I’m Greg
 
